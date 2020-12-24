@@ -1,8 +1,7 @@
-.Card {
-    background-color: red;
+.Card {    
     border-radius: 10px;    
     overflow: hidden;
-    border: solid red;    
+    border: solid;    
     margin: 10px;
     font-family: "Montserrat";
     text-align: center;
@@ -24,7 +23,7 @@
 
 .Conteudo {
     background-color: white;
+    flex-grow: 1;    
     color: black;
     padding: 30px;
-    flex: 1;    
 }

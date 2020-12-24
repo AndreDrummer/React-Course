@@ -1,6 +1,6 @@
 import React from 'react';
 import RandomNumber from './components/basicos/RandomNumber';
-import Card from './components/basicos/Card';
+import Card from './components/layout/Card';
 import Familia from './components/basicos/Familia'
 import Familia2 from './components/basicos/Familia2'
 import './App.css';

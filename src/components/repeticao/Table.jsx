@@ -1,7 +1,7 @@
 import React from 'react';
 import product from '../../data/products';
 
-export default (props) => {
+export default _ => {
     return (
         <table>
             <thead>
@@ -14,7 +14,7 @@ export default (props) => {
             <tbody>
                 {
                     product.map((prod, index) => (
-                        <tr className={index%2 === 0 ? "Par" : 'Impar'}>
+                        <tr className={index % 2 === 0 ? "Par" : 'Impar'}>
                             <td>
                                 {
                                     prod.id
