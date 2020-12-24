@@ -8,11 +8,31 @@ import FamiliaMembro2 from './components/basicos/FamiliaMembro2';
 import Table from './components/repeticao/Table';
 import PaiIndireta from './components/comunicacao/PaiIndireta';
 import Mega from './components/mega/mega';
+import If, { Else } from './components/condicional/condicional';
+import DiretaPai from './components/comunicacao/DiretaPai';
+import Contador from './components/contador/contador';
 
 export default function App() {
     return (
         <div className="App">
             <div className="Cards">
+                <Card titulo="Contador">
+                    <Contador numero={0} />
+                </Card>
+
+                <Card titulo="Comunicação Direta">
+                    <DiretaPai></DiretaPai>
+                </Card>
+
+                <Card titulo="Renderização Condicional">
+                    <If test={true}>
+                        <RandomNumber min={1} max={40} />
+                        <Else>
+                            <div>Caiu no sinão!</div>
+                        </Else>
+                    </If>
+                </Card>
+
                 <Card titulo="MEGA-SENA">
                     <Mega />
                 </Card>

@@ -12,7 +12,7 @@ export default props => {
             <div>
                 <strong>Filho</strong>
             </div>
-            <button onClick={() => props.quandoClicar(paiInfo)}>Passar informações</button>
+            <button onClick={() => props.callback(paiInfo)}>Passar informações</button>
         </div>
     )
 };

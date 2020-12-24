@@ -14,7 +14,7 @@ export default _ => {
             <tbody>
                 {
                     product.map((prod, index) => (
-                        <tr className={index % 2 === 0 ? "Par" : 'Impar'}>
+                        <tr key={prod.id} className={index % 2 === 0 ? "Par" : 'Impar'}>
                             <td>
                                 {
                                     prod.id

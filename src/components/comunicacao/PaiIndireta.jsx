@@ -10,8 +10,9 @@ export default props => {
 
     return (
         <div>
+            <div>Pai</div>
             <span>{paiInfo.nome} <strong>{paiInfo.idade}</strong> {paiInfo.nerd ? 'Veradeiro' : 'False'}</span>
-            <FilhoIndireta quandoClicar={setPaiInfo} />
+            <FilhoIndireta callback={setPaiInfo} />
         </div>
     );
 }
