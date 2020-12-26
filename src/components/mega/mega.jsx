@@ -3,15 +3,14 @@ import Bolota from './Bolota';
 import './mega.css';
 
 export default props => {
-    const MAX = 10;
     const [inputValue, setInputValue] = useState(6);
     const [arr, setArr] = useState([]);
 
-    function onInputChange(event) {        
+    function onInputChange(event) {
         setInputValue(event.target.value);
-        generateNumber(event.target.value)      
+        generateNumber(event.target.value)
     }
-    
+
     function generateNumber(qtd) {
         let arr2 = [];
         let i = 0;
@@ -23,7 +22,6 @@ export default props => {
             }
             arr2.sort((a, b) => a - b)
         }
-        console.log(arr2);
         setArr(arr2);
     }
 
@@ -31,18 +29,18 @@ export default props => {
         <div>
             <h1>SUPRESINHA</h1>
 
-            <h2> Escolha a quantidade de numeros</h2>
+            <div>
+                Escolha a quantidade de numeros <input min={6} max={15} value={inputValue} onChange={onInputChange} className="Input" type="number" />
+            </div>
 
             <div>
-                <input min={6} max={15} value={inputValue} onChange={onInputChange} className="Input" type="number" />
-
                 <button className="Button" onClick={() => generateNumber(inputValue)}>Gerar</button>
             </div>
 
             {
                 arr.map((bol) => {
                     return (
-                        <div style={{display: 'inline-block'}}>
+                        <div style={{ display: 'inline-block' }}>
                             <Bolota num={bol} />
                         </div>
                     );

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './contador.css'
+import Display from './display'
+import Botoes from './botoes'
+import Passo from './passo'
 
 class Contador extends Component {
     state = {
@@ -8,12 +11,12 @@ class Contador extends Component {
     }
 
     // Usar o construtor aqui serve para fazer o ´bind´  do ´this´ com a função inc
-    constructor(props) {
-        super(props)
+    // constructor(props) {
+    //     super(props)
 
-        // this.inc = this.inc.bind(this);
+    // this.inc = this.inc.bind(this);
 
-    }
+    // }
 
     // Sem usar função arrow preciso vincular o this no construtor ou chamar a função com arrow no onClick
     // inc() {
@@ -35,9 +38,9 @@ class Contador extends Component {
         })
     }
 
-    setPasso = (e) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: +e.target.value
+            passo: novoPasso
         })
     }
 
@@ -45,15 +48,9 @@ class Contador extends Component {
         return (
             <div className="Contador">
                 <h2>Contador</h2>
-                <h3>{this.state.numero}</h3>
-                <div>
-                    <label htmlFor="passoInput">Passo: </label>
-                    <input id="passoInput" type="number" value={this.state.passo} onChange={this.setPasso} />
-                </div>
-                <button onClick={this.inc}>+</button>
-                <button onClick={this.dec}>-</button>
-                {/* // Ou chamar a função no onClick usando arrow também funcionária */}
-                {/* <button onClick={() => this.inc()}>+</button> */}
+                <Display numero={this.state.numero} />
+                <Passo passo={this.state.passo} setPasso={this.setPasso} />
+                <Botoes inc={this.inc} dec={this.dec} />
             </div>
         );
     }

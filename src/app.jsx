@@ -33,7 +33,7 @@ export default function App() {
                     </If>
                 </Card>
 
-                <Card titulo="MEGA-SENA">
+                <Card titulo="MEGA-SENA" color="#CDEA44">
                     <Mega />
                 </Card>
 
